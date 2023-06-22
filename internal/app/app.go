@@ -20,9 +20,13 @@ import (
 
 // Run creates objects via constructors -.
 func Run(cfg *config.Config) {
+
+	//The line creates a new logger instance using the log level specified in the configuration. 
+	//The logger is used to log messages to the console throughout the application.
 	l := logger.New(cfg.Log.Level)
 
 	// HTTP Server -.
+	//the line below initializes a new instance of the gin Engine type and assigns it to the variable handler.
 	handler := gin.Default()
 
 	conn, err := postgres.New(cfg)

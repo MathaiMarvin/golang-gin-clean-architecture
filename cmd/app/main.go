@@ -6,6 +6,8 @@ import (
 	"log"
 )
 
+//This is the entry point of the program and is automatically executed when the program starts
+
 func main() {
 	// Configuration
 	cfg, err := config.NewConfig()
